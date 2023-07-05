@@ -7,16 +7,25 @@
 
 import UIKit
 
+protocol KoreadEntryViewControllerDelegate {
+    func didSelectedKoreaEntry(entryItem: ExpositionItem)
+}
+
 final class KoreaEntryViewController: UIViewController {
+    var delegate: KoreadEntryViewControllerDelegate?
     private let koreaEntryTitle = "한국의 출품작"
-    private var koreaEntryItems: [ExpositionItem]?
+    private var koreaEntryItems: [ExpositionItem]
+    private lazy var dataSource = KoreaEntryDataSource(koreaEntryList: koreaEntryItems)
     
-    private lazy var dataSource: KoreaEntryDataSource = {
-        let data = decodingKoreaEntryInformation()
-        let dataSource = KoreaEntryDataSource(koreaEntryList: data)
+    init(koreaEntryItems: [ExpositionItem]) {
+        self.koreaEntryItems = koreaEntryItems
         
-        return dataSource
-    }()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -53,13 +62,6 @@ final class KoreaEntryViewController: UIViewController {
         navigationItem.title = koreaEntryTitle
     }
     
-    private func decodingKoreaEntryInformation() -> [ExpositionItem]? {
-        guard let data: [ExpositionItem] = Decoder.decode(fileName: "items") else { return nil }
-        
-        koreaEntryItems = data
-        return data
-    }
-    
     private func setBackgroundColor(_ color: UIColor) {
         view.backgroundColor = color
     }
@@ -68,13 +70,9 @@ final class KoreaEntryViewController: UIViewController {
 // MARK: - TableView Delegate
 extension KoreaEntryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let entryInformation = koreaEntryItems?[safe: indexPath.row] else { return }
-        let entryDetailViewController = EntryDetailViewController()
+        guard let entryInformation = koreaEntryItems[safe: indexPath.row] else { return }
         
-        entryDetailViewController.setEntryDetailInformation(entryInformation.name,
-                                                             entryInformation.imageName,
-                                                             entryInformation.description)
-        navigationController?.pushViewController(entryDetailViewController, animated: true)
+        delegate?.didSelectedKoreaEntry(entryItem: entryInformation)
         navigationItem.backButtonTitle = koreaEntryTitle
         tableView.deselectRow(at: indexPath, animated: true)
     }

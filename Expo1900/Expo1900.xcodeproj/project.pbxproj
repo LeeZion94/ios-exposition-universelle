@@ -13,6 +13,11 @@
 		5BB01BA22A51340900EB0590 /* Array +.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB01BA12A51340900EB0590 /* Array +.swift */; };
 		5BB01BA82A5406C500EB0590 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB01BA72A5406C500EB0590 /* AppSettings.swift */; };
 		5BB01BAA2A540EE300EB0590 /* CommonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB01BA92A540EE300EB0590 /* CommonLabel.swift */; };
+		5BFA74B62A5543ED009A7787 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA74B52A5543ED009A7787 /* Coordinator.swift */; };
+		5BFA74B82A55441B009A7787 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA74B72A55441B009A7787 /* AppCoordinator.swift */; };
+		5BFA74BD2A55456B009A7787 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA74BC2A55456B009A7787 /* MainCoordinator.swift */; };
+		5BFA74BF2A5545AC009A7787 /* KoreaEntryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA74BE2A5545AC009A7787 /* KoreaEntryCoordinator.swift */; };
+		5BFA74C12A5545C0009A7787 /* EntryDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFA74C02A5545C0009A7787 /* EntryDetailCoordinator.swift */; };
 		C79FF4B52589F401005FB0FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B42589F401005FB0FD /* AppDelegate.swift */; };
 		C79FF4B72589F401005FB0FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B62589F401005FB0FD /* SceneDelegate.swift */; };
 		C79FF4B92589F401005FB0FD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FF4B82589F401005FB0FD /* MainViewController.swift */; };
@@ -33,6 +38,11 @@
 		5BB01BA12A51340900EB0590 /* Array +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array +.swift"; sourceTree = "<group>"; };
 		5BB01BA72A5406C500EB0590 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		5BB01BA92A540EE300EB0590 /* CommonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLabel.swift; sourceTree = "<group>"; };
+		5BFA74B52A5543ED009A7787 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		5BFA74B72A55441B009A7787 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5BFA74BC2A55456B009A7787 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5BFA74BE2A5545AC009A7787 /* KoreaEntryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreaEntryCoordinator.swift; sourceTree = "<group>"; };
+		5BFA74C02A5545C0009A7787 /* EntryDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailCoordinator.swift; sourceTree = "<group>"; };
 		C79FF4B12589F401005FB0FD /* Expo1900.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expo1900.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79FF4B42589F401005FB0FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79FF4B62589F401005FB0FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +75,7 @@
 				5BB01BA72A5406C500EB0590 /* AppSettings.swift */,
 				C79FF4B42589F401005FB0FD /* AppDelegate.swift */,
 				C79FF4B62589F401005FB0FD /* SceneDelegate.swift */,
+				5BFA74B72A55441B009A7787 /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -77,16 +88,6 @@
 				C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		5B04A3152A4C56440059C690 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C79FF4B82589F401005FB0FD /* MainViewController.swift */,
-				D26543082A4C5B3C003B1AC0 /* KoreaEntryViewController.swift */,
-				D265432D2A4D6AC1003B1AC0 /* EntryDetailViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		5B04A3162A4C564D0059C690 /* Resource */ = {
@@ -102,6 +103,7 @@
 			children = (
 				5B04A3412A4DA3850059C690 /* Decoder.swift */,
 				5BB01BA92A540EE300EB0590 /* CommonLabel.swift */,
+				5BFA74B52A5543ED009A7787 /* Coordinator.swift */,
 				5B04A33C2A4D67D50059C690 /* Extension */,
 			);
 			path = Util;
@@ -133,6 +135,33 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
+		5BFA74B92A554541009A7787 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA74BC2A55456B009A7787 /* MainCoordinator.swift */,
+				C79FF4B82589F401005FB0FD /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5BFA74BA2A554545009A7787 /* KoreaEntry */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA74BE2A5545AC009A7787 /* KoreaEntryCoordinator.swift */,
+				D26543082A4C5B3C003B1AC0 /* KoreaEntryViewController.swift */,
+			);
+			path = KoreaEntry;
+			sourceTree = "<group>";
+		};
+		5BFA74BB2A55454E009A7787 /* EntryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5BFA74C02A5545C0009A7787 /* EntryDetailCoordinator.swift */,
+				D265432D2A4D6AC1003B1AC0 /* EntryDetailViewController.swift */,
+			);
+			path = EntryDetail;
+			sourceTree = "<group>";
+		};
 		C79FF4A82589F401005FB0FD = {
 			isa = PBXGroup;
 			children = (
@@ -155,9 +184,11 @@
 				C79FF4C22589F404005FB0FD /* Info.plist */,
 				5B04A33B2A4D67CE0059C690 /* Util */,
 				5B04A3132A4C56310059C690 /* App */,
+				5BFA74B92A554541009A7787 /* Main */,
+				5BFA74BA2A554545009A7787 /* KoreaEntry */,
+				5BFA74BB2A55454E009A7787 /* EntryDetail */,
 				5B04A3162A4C564D0059C690 /* Resource */,
 				D265430C2A4D32FB003B1AC0 /* Model */,
-				5B04A3152A4C56440059C690 /* ViewController */,
 				5B04A3142A4C563C0059C690 /* View */,
 			);
 			path = Expo1900;
@@ -241,11 +272,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BFA74C12A5545C0009A7787 /* EntryDetailCoordinator.swift in Sources */,
+				5BFA74B62A5543ED009A7787 /* Coordinator.swift in Sources */,
 				5BA9929E2A49B20A00613BD1 /* ExpositionItem.swift in Sources */,
+				5BFA74B82A55441B009A7787 /* AppCoordinator.swift in Sources */,
 				D2DB552C2A4C3ED4003F80C6 /* MainView.swift in Sources */,
 				5BB01BA82A5406C500EB0590 /* AppSettings.swift in Sources */,
 				C79FF4B92589F401005FB0FD /* MainViewController.swift in Sources */,
+				5BFA74BF2A5545AC009A7787 /* KoreaEntryCoordinator.swift in Sources */,
 				D26543092A4C5B3C003B1AC0 /* KoreaEntryViewController.swift in Sources */,
+				5BFA74BD2A55456B009A7787 /* MainCoordinator.swift in Sources */,
 				5BB01BAA2A540EE300EB0590 /* CommonLabel.swift in Sources */,
 				D265430B2A4D32F3003B1AC0 /* KoreaEntryDataSource.swift in Sources */,
 				5BB01BA22A51340900EB0590 /* Array +.swift in Sources */,

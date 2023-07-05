@@ -6,10 +6,26 @@
 
 import UIKit
 
+protocol MainViewControllerDelegate {
+    func didTappedKoreaEntryButton()
+}
+
 final class MainViewController: UIViewController, MainViewDelegate {
+    var delegate: MainViewControllerDelegate?
+    var expositionInformation: ParisExpositionInformation
     private let backButtonTitle = "메인"
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         .portrait
+    }
+    
+    init(expositionInformation: ParisExpositionInformation) {
+        self.expositionInformation = expositionInformation
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private lazy var mainView: MainView = {
@@ -45,9 +61,7 @@ final class MainViewController: UIViewController, MainViewDelegate {
     }
 
     private func loadMainViewInformation() {
-        guard let information: ParisExpositionInformation = Decoder.decode(fileName: "exposition_universelle_1900") else { return }
-        
-        mainView.load(information: information)
+        mainView.load(information: expositionInformation)
     }
     
     private func setBackgroundColor(_ color: UIColor) {
@@ -62,8 +76,6 @@ final class MainViewController: UIViewController, MainViewDelegate {
 // MARK: - MainView Delegate
 extension MainViewController {
     func didTappedKoreaEntryButton() {
-        let koreaEntryViewController = KoreaEntryViewController()
-        
-        navigationController?.pushViewController(koreaEntryViewController, animated: true)
+        delegate?.didTappedKoreaEntryButton()
     }
 }
