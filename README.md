@@ -67,11 +67,11 @@
 
 | 만국 박람회 동작 화면 | Dynamic Type 적용 |
 | :--------------: | :-------: | 
-| <Img src = "https://postfiles.pstatic.net/MjAyMzA3MDdfMTAx/MDAxNjg4NzA4NjIzODk4.4YuI1qp7LQf0236bATCVRWrQidzJOA2D7pY1WUrdxWMg.xWTWAgt7EVJ5jcGP6GmzlvHfEebeTxrG5aXXpPpLtC8g.GIF.sha0720/sdf.gif?type=w773" width="400"/> | <Img src = "https://postfiles.pstatic.net/MjAyMzA3MDdfNTUg/MDAxNjg4NzA3ODk0MTIy.332aXitqiKwrk0IqlghUcLrNLn3Y5_GvGgvZplStRu0g.FV0w_yJqOfuLPQMjeAcPbsWQVATAgNE4fIbp3eR51UIg.GIF.sha0720/KakaoTalk_Photo_2023-07-07-14-31-03.gif?type=w773" width="400"/>  |
+| <Img src = "https://postfiles.pstatic.net/MjAyMzA3MDdfMTAx/MDAxNjg4NzA4NjIzODk4.4YuI1qp7LQf0236bATCVRWrQidzJOA2D7pY1WUrdxWMg.xWTWAgt7EVJ5jcGP6GmzlvHfEebeTxrG5aXXpPpLtC8g.GIF.sha0720/sdf.gif?type=w773" width="250"/> | <Img src = "https://postfiles.pstatic.net/MjAyMzA3MDdfNTUg/MDAxNjg4NzA3ODk0MTIy.332aXitqiKwrk0IqlghUcLrNLn3Y5_GvGgvZplStRu0g.FV0w_yJqOfuLPQMjeAcPbsWQVATAgNE4fIbp3eR51UIg.GIF.sha0720/KakaoTalk_Photo_2023-07-07-14-31-03.gif?type=w773" width="250"/>  |
 
 | 화면 회전 | 
 | :--------------: |
-| <Img src = "https://postfiles.pstatic.net/MjAyMzA3MDdfMTIz/MDAxNjg4NzA3ODk0MjE4.j873RpDqqS5X-9rBsUhmUvoMGrJIVCJStDmrPJvStXMg.gAHcHoSCXXyJ-U3IPywHt-JonrSaxnEIRinfv443aVAg.GIF.sha0720/KakaoTalk_Photo_2023-07-07-14-30-41.gif?type=w773" width="800"/> |
+| <Img src = "https://postfiles.pstatic.net/MjAyMzA3MDdfMTIz/MDAxNjg4NzA3ODk0MjE4.j873RpDqqS5X-9rBsUhmUvoMGrJIVCJStDmrPJvStXMg.gAHcHoSCXXyJ-U3IPywHt-JonrSaxnEIRinfv443aVAg.GIF.sha0720/KakaoTalk_Photo_2023-07-07-14-30-41.gif?type=w773" width="500"/> |
 
 <br>
 
