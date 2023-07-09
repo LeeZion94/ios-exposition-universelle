@@ -21,7 +21,6 @@
 		C79FF4BE2589F404005FB0FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BD2589F404005FB0FD /* Assets.xcassets */; };
 		C79FF4C12589F404005FB0FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C79FF4BF2589F404005FB0FD /* LaunchScreen.storyboard */; };
 		D26543092A4C5B3C003B1AC0 /* KoreaEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26543082A4C5B3C003B1AC0 /* KoreaEntryViewController.swift */; };
-		D265430B2A4D32F3003B1AC0 /* KoreaEntryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265430A2A4D32F3003B1AC0 /* KoreaEntryDataSource.swift */; };
 		D265432E2A4D6AC1003B1AC0 /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265432D2A4D6AC1003B1AC0 /* EntryDetailViewController.swift */; };
 		D26543322A4E82D9003B1AC0 /* String +.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26543312A4E82D9003B1AC0 /* String +.swift */; };
 		D2DB54E02A49B366003F80C6 /* ParisExpositionInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DB54DF2A49B366003F80C6 /* ParisExpositionInformation.swift */; };
@@ -45,7 +44,6 @@
 		C79FF4C02589F404005FB0FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C79FF4C22589F404005FB0FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D26543082A4C5B3C003B1AC0 /* KoreaEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreaEntryViewController.swift; sourceTree = "<group>"; };
-		D265430A2A4D32F3003B1AC0 /* KoreaEntryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreaEntryDataSource.swift; sourceTree = "<group>"; };
 		D265432D2A4D6AC1003B1AC0 /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		D26543312A4E82D9003B1AC0 /* String +.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String +.swift"; sourceTree = "<group>"; };
 		D2DB54DF2A49B366003F80C6 /* ParisExpositionInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParisExpositionInformation.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 		D265430C2A4D32FB003B1AC0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D265430A2A4D32F3003B1AC0 /* KoreaEntryDataSource.swift */,
 				5BA9929C2A49B1D100613BD1 /* DTO */,
 			);
 			path = Model;
@@ -263,7 +260,6 @@
 				C79FF4B92589F401005FB0FD /* MainViewController.swift in Sources */,
 				D26543092A4C5B3C003B1AC0 /* KoreaEntryViewController.swift in Sources */,
 				5BB01BAA2A540EE300EB0590 /* CommonLabel.swift in Sources */,
-				D265430B2A4D32F3003B1AC0 /* KoreaEntryDataSource.swift in Sources */,
 				5BB01BA22A51340900EB0590 /* Array +.swift in Sources */,
 				D2DB54E02A49B366003F80C6 /* ParisExpositionInformation.swift in Sources */,
 				5B04A3472A4E8D7D0059C690 /* KoreaEntryTableViewCell.swift in Sources */,

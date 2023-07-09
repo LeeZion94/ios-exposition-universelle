@@ -14,11 +14,10 @@ protocol KoreaEntryViewControllerDelegate: AnyObject {
 final class KoreaEntryViewController: UIViewController {
     weak var delegate: KoreaEntryViewControllerDelegate?
     private var koreaEntryItems: [ExpositionItem]
-    private lazy var dataSource = KoreaEntryDataSource(data: koreaEntryItems)
+    private var dataSource: UITableViewDiffableDataSource<Int, UUID>!
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.delegate = self
-        tableView.dataSource = dataSource
         tableView.register(KoreaEntryTableViewCell.self, forCellReuseIdentifier: KoreaEntryTableViewCell.reuseIdentifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -37,6 +36,7 @@ final class KoreaEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpDiffableDataSource()
         setBackgroundColor(.systemBackground)
         configureUI()
         setUpTableViewConstraints()
@@ -53,6 +53,26 @@ final class KoreaEntryViewController: UIViewController {
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    private func setUpDiffableDataSource() {
+        dataSource = UITableViewDiffableDataSource<Int, UUID>(tableView: tableView, cellProvider: { tableView, indexPath, itemIdentifier in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: KoreaEntryTableViewCell.reuseIdentifier, for: indexPath) as? KoreaEntryTableViewCell else { return UITableViewCell() }
+            
+            cell.configure(with: self.koreaEntryItems[indexPath.row])
+            return cell
+        })
+        
+        setUpDiffableDataSourceSnapShot()
+        tableView.dataSource = dataSource
+    }
+    
+    private func setUpDiffableDataSourceSnapShot() {
+        var snapshot = NSDiffableDataSourceSnapshot<Int, UUID>()
+        
+        snapshot.appendSections([0])
+        koreaEntryItems.forEach{ _ in snapshot.appendItems([UUID()]) }
+        dataSource.apply(snapshot)
     }
     
     private func setBackgroundColor(_ color: UIColor) {
